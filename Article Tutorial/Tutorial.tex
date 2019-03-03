@@ -28,12 +28,26 @@
 \usepackage{caption}
 \usepackage{subcaption}
 
+%Multiple Columns
+\usepackage{multicol}
+
+
+%Guesswork, but has to do with the 66 characters per line
+%Make a new length called alphabet
+\newlength{\alphabet}
+%Set the width of alphabet to the alphabet in normalfont
+\settowidth{\alphabet}{\normalfont abcdefghijklmnopqrstuvwxyz}
+
+\usepackage{geometry}
+%Use geometry to make the normal width 2.5 times alphabet. The horoziontal margin ratio 2:3 (I'll investigate how to make it oscillate later)
+\geometry{textwidth=2.75\alphabet,hmarginratio={2:3}}
+
 %Bibliography style, might as well put it here
 \bibliographystyle{unsrtnat}
 \begin{document}
 
 %title, it can be made before the \begin{document}
-\title{Latex Example}
+\title{Latex Tutorial}
 \author{Toby Lam}
 \date{\today}
 \maketitle
@@ -82,7 +96,7 @@ I love maths! \\
 		\item[+] Customized item 1
 		\item[pdf] Customized item 2
 	\end{itemize}
-	\item Third number
+	\item Third number\footnote{Wow! A footnote!}
 \end{enumerate}
 
 %Special characters
@@ -113,6 +127,10 @@ singular & double & triple \\
 1 & 2 & 3\\
 \cline{3-3}
 \end{tabular}
+
+\vspace{5px}
+%Width is with respect to the words' length.
+\framebox[1.1\width]{This is a lovely box, isn't it?} \par
 
 \newpage
 \chapter{Maths}
@@ -164,6 +182,8 @@ Since corollaries are theorems, according to theorem \ref{truth}, corollaries ar
 
 \newpage
 
+\chapter{Structure}
+
 \begin{wrapfigure}{r}{0.5\textwidth}
 	
 	%Centers it
@@ -178,8 +198,8 @@ Since corollaries are theorems, according to theorem \ref{truth}, corollaries ar
 	
 \end{wrapfigure}
 
-This is some wheat. It's nice, isn't it? Remember that wrapfigure goes behind the text you want it to wrap in.\\
-
+This is some wheat. It's nice, isn't it? Remember that wrapfigure goes behind the text you want it to wrap in. For elegance, let's start a new paragraph properly.
+\par
 This time we will do 2 figures next to each other.\\\\
 \\
 \\
@@ -207,20 +227,20 @@ This time we will do 2 figures next to each other.\\\\
 	
 \end{figure}
 
-{For some reason, text alignment breaks here. However it's solved with brackets. I suppose they should be used whenever alignment problems arises.}
-
-
-\listoffigures
-
+{For some reason, text alignment breaks here. However it's solved with brackets. I suppose they should be used whenever alignment problems arises.\\}
 
 \newpage
+\section*{Hidden Section... Shhhh}
 
+%Number of multicolumns
+\begin{multicols}{2}
+	[We will start a multicolumn section. 
+	Add square brackets to indicate that the text will span all the columns / be normal]
+	
+	The text in the two columns are automatically adjusted so that the height of them are equivalent. This makes it better than subfigures in certain circumstances .This doesn't really work if there's too little words. Wrapfigures works within these columns and again they will be automated.\\
+\end{multicols}
 
-
-
-
-
-
+\newpage
 
 %Remember to start a bib file called References.bib before doing this step
 %This generates the refernces page
