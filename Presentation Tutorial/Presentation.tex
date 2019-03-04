@@ -9,20 +9,26 @@
  
  
 %Information to be included in the title page:
-\title{Sample title}
-\author{Anonymous}
-\institute{Overleaf}
-\date{2014}
+\title{Latex Tutorial (In Progress)}
+\author{Toby Lam}
+\date{\today}
  
  
  
 \begin{document}
  
 \frame{\titlepage}
+
+\begin{frame}
+\tableofcontents
+\end{frame}
+ 
+ 
  
 \begin{frame}
-\frametitle{Sample frame title}
-This is a text in the first frame. This is a text in the first frame. This is a text in the first frame. Text, basically.
+\section{Basics}
+\frametitle{First Frame}
+This is a text in the first frame.
 \end{frame}
  
  
@@ -30,40 +36,35 @@ This is a text in the first frame. This is a text in the first frame. This is a 
  
  
  \begin{frame}
- \frametitle{Sample frame title}
- This is a text in second frame. 
- For the sake of showing an example.
+ \frametitle{Lists}
+ This is a text in second frame. Let's start a list.
  
  \begin{itemize}
- 	\item<1-> Text visible on slide 1
- 	\item<2-> Text visible on slide 2
- 	\item<3-> Text visible on slide 3
+ 	\item 1 \pause
+ 	\item 2 \pause
+ 	\item 3 \pause
  \end{itemize}
  
 \end{frame}
 
 
-
-
-
 \begin{frame}
-\frametitle{Sample frame title}
+\frametitle{Boxes}
 
-In this slide, some important text will be
-\alert{highlighted} because it's important.
-Please, don't abuse it.
+\alert{ALERT!} Use it when it's actually important
 
 \begin{block}{Remark}
-	Sample text
+	This is a block
 \end{block}
 
 \begin{alertblock}{Important theorem}
-	Sample text in red box
+	This is an \textit{alert} block
 \end{alertblock}
 
 \begin{examples}
-	Sample text in green box. The title of the block is ``Examples".
+	This is an example
 \end{examples}
+
 \end{frame}
 
 \begin{frame}
@@ -71,13 +72,11 @@ Please, don't abuse it.
 \begin{columns}
 	
 	\column{0.5\textwidth}
-	This is a text in first column.
-	$$asdf$$
+	This is a text in the first column.
 	
 	\column{0.5\textwidth}
-	This text will be in the second column
-	and on a second tought this is a nice looking
-	layout in some cases.
+	This is a text in the second column.
+	
 \end{columns}
 \end{frame}
 
