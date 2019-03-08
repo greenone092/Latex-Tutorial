@@ -11,3 +11,7 @@ Article Tutorial/Tutorial.pdf
 Article Tutorial/Tutorial.synctex.gz
 Article Tutorial/Tutorial.synctex.gz
 Article Tutorial/Tutorial.pdf
+Article Tutorial/Tutorial.pdf
+Article Tutorial/Tutorial.synctex.gz
+*.gz
+*.pdf

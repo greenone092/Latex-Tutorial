@@ -6,7 +6,7 @@
 
 %Change if necessary, all packages must be BEFORE \begin{document}
 \usepackage[a4paper, portrait]{geometry}
-\usepackage[utf8]{inputenc}
+
 
 %Biblical Stuff (No need for biblatex, i think it's already imported)
 %Needed for unsrtnat, the biblogrphical style i like, numbers so that it supports numbers in the url, square for squre spaces
@@ -42,8 +42,16 @@
 %% Third, back at the DOS prompt, run:
 %% initexmf --mkmaps
 %%(Ignore any error messages.) 
-\usepackage{libertine}
 
+%% Use this website http://www.tug.dk/FontCatalogue/ to find any fonts
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+%% Even though i used ebgaramond as a package, i mapped garamond.map and it worked, i suppose this applies to others as well.
+%% \usepackage{ebgaramond}
+
+\usepackage{libertine}
 
 %Guesswork, but has to do with the 66 characters per line
 %Make a new length called alphabet
