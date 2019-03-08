@@ -31,6 +31,19 @@
 %Multiple Columns
 \usepackage{multicol}
 
+%%Font changing, this took me way too long.
+%% First, edit the map configuration file updmap.cfg as follows. In a DOS/Command Prompt window, run:
+%% initexmf --edit-config-file updmap
+%% You'll want to edit this in a text editor such as Notepad.
+
+%% Second, add this one line to updmap.cfg and save it:
+%% Map newfont.map (In this case, Map libertine.map)
+
+%% Third, back at the DOS prompt, run:
+%% initexmf --mkmaps
+%%(Ignore any error messages.) 
+\usepackage{libertine}
+
 
 %Guesswork, but has to do with the 66 characters per line
 %Make a new length called alphabet
