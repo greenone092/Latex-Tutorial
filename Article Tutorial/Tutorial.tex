@@ -6,7 +6,7 @@
 
 %Change if necessary, all packages must be BEFORE \begin{document}
 \usepackage[a4paper, portrait]{geometry}
-\usepackage[utf8]{inputenc}
+
 
 %Biblical Stuff (No need for biblatex, i think it's already imported)
 %Needed for unsrtnat, the biblogrphical style i like, numbers so that it supports numbers in the url, square for squre spaces
@@ -18,8 +18,10 @@
 %Used for the url font in the bibligrophy
 \usepackage{url}
 
-%I think this makes everything clickable, including urls, tables of content, etc.
-\usepackage{hyperref}
+%I do not understand this fully, the below sets a chapter + section mark on the top
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[L]{\rightmark}
 
 %Pictures
 \usepackage{graphicx}
@@ -31,6 +33,26 @@
 %Multiple Columns
 \usepackage{multicol}
 
+%%Font changing, this took me way too long.
+%% First, edit the map configuration file updmap.cfg as follows. In a DOS/Command Prompt window, run:
+%% initexmf --edit-config-file updmap
+%% You'll want to edit this in a text editor such as Notepad.
+
+%% Second, add this one line to updmap.cfg and save it:
+%% Map newfont.map (In this case, Map libertine.map)
+
+%% Third, back at the DOS prompt, run:
+%% initexmf --mkmaps
+%%(Ignore any error messages.) 
+
+%% Use this website http://www.tug.dk/FontCatalogue/ to find any fonts
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+%% Even though i used ebgaramond as a package, i mapped garamond.map and it worked, i suppose this applies to others as well.
+%% \usepackage{ebgaramond}
+\usepackage{libertine}
 
 %Guesswork, but has to do with the 66 characters per line
 %Make a new length called alphabet
@@ -39,8 +61,13 @@
 \settowidth{\alphabet}{\normalfont abcdefghijklmnopqrstuvwxyz}
 
 \usepackage{geometry}
+\geometry{textwidth=2.5\alphabet,hmarginratio={2:3}}
+
 %Use geometry to make the normal width 2.5 times alphabet. The horoziontal margin ratio 2:3 (I'll investigate how to make it oscillate later)
-\geometry{textwidth=2.75\alphabet,hmarginratio={2:3}}
+
+%I think this makes everything clickable, including urls, tables of content, etc.
+\usepackage{hyperref}
+\usepackage{bookmark}
 
 %Bibliography style, might as well put it here
 \bibliographystyle{unsrtnat}
@@ -64,7 +91,7 @@
 %double indent for indent of first line
 \indent
 \indent
-I love maths! \\
+I love \LaTeX! \\
 
 \noindent
 \textit{Italic} \\
@@ -80,7 +107,7 @@ I love maths! \\
 \vspace{2pt}
 %Horizontal space, only works between words, doesn't replace \indent
 \noindent
-{\huge Huge \hspace{10pt} words} \\
+{\huge Huge \hspace{1pt} words} \\
 
 %Set all fonts afterwards as normalsize
 \normalsize

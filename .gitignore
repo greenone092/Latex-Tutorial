@@ -9,3 +9,5 @@ Presentation Tutorial/Presentation.toc
 Article Tutorial/Tutorial.log
 Article Tutorial/Tutorial.pdf
 Article Tutorial/Tutorial.synctex.gz
+*.aux
+*.gz
