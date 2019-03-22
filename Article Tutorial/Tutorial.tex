@@ -7,7 +7,6 @@
 %Change if necessary, all packages must be BEFORE \begin{document}
 \usepackage[a4paper, portrait]{geometry}
 
-
 %Biblical Stuff (No need for biblatex, i think it's already imported)
 %Needed for unsrtnat, the biblogrphical style i like, numbers so that it supports numbers in the url, square for squre spaces
 \usepackage[square,numbers]{natbib}
@@ -16,7 +15,7 @@
 \usepackage{wrapfig}
 
 %Used for the url font in the bibligrophy
-\usepackage{url}
+\usepackage[hyphens,spaces,obeyspaces]{url}
 
 %I do not understand this fully, the below sets a chapter + section mark on the top
 \usepackage{fancyhdr}
@@ -56,8 +55,8 @@
 
 %Guesswork, but has to do with the 66 characters per line
 %Make a new length called alphabet
-%Set the width of alphabet to the alphabet in normalfont
 \newlength{\alphabet}
+%Set the width of alphabet to the alphabet in normalfont
 \settowidth{\alphabet}{\normalfont abcdefghijklmnopqrstuvwxyz}
 
 \usepackage{geometry}
@@ -66,6 +65,7 @@
 %Use geometry to make the normal width 2.5 times alphabet. The horoziontal margin ratio 2:3 (I'll investigate how to make it oscillate later)
 
 %I think this makes everything clickable, including urls, tables of content, etc.
+%It is put here to make  as recommended
 \usepackage{hyperref}
 \usepackage{bookmark}
 

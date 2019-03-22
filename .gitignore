@@ -11,3 +11,8 @@ Article Tutorial/Tutorial.pdf
 Article Tutorial/Tutorial.synctex.gz
 *.aux
 *.gz
+Article Tutorial/texput.log
+Article Tutorial/Tutorial.dvi
+Article Tutorial/Tutorial.out.ps
+Article Tutorial/Tutorial.pdf
+Article Tutorial/Tutorial.synctex.gz
