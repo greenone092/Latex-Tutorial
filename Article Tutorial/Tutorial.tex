@@ -53,6 +53,12 @@
 
 \usepackage{libertine}
 
+%% Highlighter
+\usepackage{color,soul}
+
+%%Chemistry
+\usepackage{chemfig}
+
 %Guesswork, but has to do with the 66 characters per line
 %Make a new length called alphabet
 \newlength{\alphabet}
@@ -86,6 +92,9 @@
 \indent
 \indent
 I love maths! \\
+
+\noindent
+\hl{Highlighted Text}
 
 \noindent
 \textit{Italic} \\
@@ -133,8 +142,15 @@ $\delta$ $\Delta$ %etc
 
 %Super, subscript
 A \textsuperscript{superscript} \textsubscript{subscript} 
-$$A^{super}_{sub}$$
+$$A^{super}_{sub}$$\\
 \end{center}
+
+\chemfig{N~N} \\
+
+%% Look at at this way, the horizontal is first. Hence if you remove all the brankets, H-C-C
+%% [2] means 2 unit angle, starting from the rightwards direction. Each unit counts  for 45 degrees.
+
+\chemfig{H-C(-[2]H)(-[6]H)-C(=[1]O)-[7]H} \\
 
 %Tables!
 %| means straight lines
