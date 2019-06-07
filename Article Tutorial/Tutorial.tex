@@ -56,8 +56,14 @@
 %% Highlighter
 \usepackage{color,soul}
 
-%%Chemistry
+%% Chemistry
+%% 2D Figures
 \usepackage{chemfig}
+%% Text
+\usepackage[version=4]{mhchem}
+
+%%Booktabs, for thicc lines
+\usepackage{booktabs}
 
 %Guesswork, but has to do with the 66 characters per line
 %Make a new length called alphabet
@@ -72,6 +78,11 @@
 %Bibliography style, might as well put it here
 \bibliographystyle{unsrtnat}
 \begin{document}
+
+
+
+
+
 
 %title, it can be made before the \begin{document}
 \title{\Huge Latex Tutorial}
@@ -145,29 +156,39 @@ A \textsuperscript{superscript} \textsubscript{subscript}
 $$A^{super}_{sub}$$\\
 \end{center}
 
-\chemfig{N~N} \\
+%% [!htbp] for more relaxed placement, probbaly gonna do that at all times
+\begin{figure}[!htbp]
+	%% Centering just means put whatever is below to be centered
+	\centering
+	%% ~ means triple bond
+	\chemfig{N~N} \\
+	%% \ce for anything thats text equations
+	\caption{\ce{N2} Compound}
+\end{figure}
+
 
 %% Look at at this way, the horizontal is first. Hence if you remove all the brankets, H-C-C
 %% [2] means 2 unit angle, starting from the rightwards direction. Each unit counts  for 45 degrees.
+\begin{figure}[!htbp]
+	\centering
+	\chemfig{H-C(-[2]H)(-[6]H)-C(=[1]O)-[7]H} \\
+	\caption{Acetaldehyde}
+\end{figure}
 
-\chemfig{H-C(-[2]H)(-[6]H)-C(=[1]O)-[7]H} \\
-
-%Tables!
-%| means straight lines
-\begin{tabular}{|l|r|c|}
-\hline
-left & right & center \\
-singular & double & triple \\
-\hline
-1 & 2 & 3\\
-\cline{2-3}
-1 & 2 & 3\\
-\cline{3-3}
-\end{tabular}
-
-\vspace{5px}
-%Width is with respect to the words' length.
-\framebox[1.1\width]{This is a lovely box, isn't it?} \par
+\begin{table}[!thbp]
+	\centering
+	\caption{A table without vertical lines.}
+	\begin{tabular}{lcc}
+		%% Imported from booktabs, thicc line
+		\toprule
+		&Treatment A&Treatment B\\
+		\hline
+		John Smith&1&2\\
+		Jane Doe&--&3\\
+		Mary Johnson&4&5\\
+		\bottomrule
+	\end{tabular}
+\end{table}
 
 \newpage
 \chapter{Maths}
