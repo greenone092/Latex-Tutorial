@@ -65,24 +65,15 @@
 %%Booktabs, for thicc lines
 \usepackage{booktabs}
 
-%Guesswork, but has to do with the 66 characters per line
-%Make a new length called alphabet
-\newlength{\alphabet}
-%Set the width of alphabet to the alphabet in normalfont
-\settowidth{\alphabet}{\normalfont abcdefghijklmnopqrstuvwxyz}
+\usepackage{tikZ}
 
+%Removed feature but I will still include it
+\newlength{\alphabet}
 \usepackage{geometry}
-%Use geometry to make the normal width 2.5 times alphabet. The horoziontal margin ratio 2:3 (I'll investigate how to make it oscillate later)
-\geometry{textwidth=2.75\alphabet,hmarginratio={2:3}}
 
 %Bibliography style, might as well put it here
 \bibliographystyle{unsrtnat}
 \begin{document}
-
-
-
-
-
 
 %title, it can be made before the \begin{document}
 \title{\Huge Latex Tutorial}
@@ -299,6 +290,47 @@ This time we will do 2 figures next to each other.\\\\
 \end{multicols}
 
 \newpage
+
+\chapter{Tikz}
+
+This section is about Tikz, which is a package used to draw graphs.\\
+
+\begin{tikzpicture}[xscale=2,yscale=2]
+\draw[->][thick][dashed][rounded corners]   (0,0) --(1,2) -- (2,3) -- (1,0);
+\draw[->][semithick][dotted]  (0,0) -- (2,2);
+\draw[help lines] (0,2) -- (2,2) -- (2,0);
+
+%%Draws a point
+\draw[fill] (2,2) circle [radius=0.025];
+\node [above right] at (2,2) {\tiny Special point};
+\draw[<->] (4,0) -- (0,0) -- (0,3);
+\draw [red, ultra thick, fill = orange] (3,0.6) circle [radius=0.5];
+
+%% in / out means the angle in degrees of the tangent of the curve (counting anti clockrise from right horizontal)
+
+%% For the in angle, you have to basically add 180 degrees
+\draw (0,0) to [out = 75, in = 200](2,1) to [out = 20, in = 180](4,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[->][thick][dashed][rounded corners]   (0,0) --(1,2) -- (2,3) -- (1,0);
+\draw[->][semithick][dotted]  (0,0) -- (2,2);
+\draw[help lines] (0,2) -- (2,2) -- (2,0);
+
+%%Draws a point
+\draw[fill] (2,2) circle [radius=0.025];
+\node [above right] at (2,2) {\tiny Special point};
+\draw[<->] (4,0) -- (0,0) -- (0,3);
+\draw [red, ultra thick, fill = orange] (3,0.6) circle [radius=0.5];
+
+%% in / out means the angle in degrees of the tangent of the curve (counting anti clockrise from right horizontal)
+
+%% For the in angle, you have to basically add 180 degrees
+\draw (0,0) to [out = 75, in = 200](2,1) to [out = 20, in = 180](4,0);
+
+\end{tikzpicture}
+
 
 %Remember to start a bib file called References.bib before doing this step
 %This generates the refernces page

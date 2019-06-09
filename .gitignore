@@ -19,3 +19,9 @@ Article Tutorial/Tutorial.synctex.gz
 Article Tutorial/Tutorial.pdf
 Article Tutorial/Tutorial.aux
 Article Tutorial/Tutorial.log
+*.pdf
+*.out
+*.log
+*.aux
+*.gz
+*.toc
