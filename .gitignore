@@ -25,3 +25,7 @@ Article Tutorial/Tutorial.log
 *.aux
 *.gz
 *.toc
+Article Tutorial/Tutorial.log
+*.pdf
+*.gz
+*.log
