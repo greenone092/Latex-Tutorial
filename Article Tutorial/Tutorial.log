@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.3)  9 JUN 2019 11:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.3)  20 JUN 2019 21:26
 entering extended mode
 **./Tutorial.tex
 (Tutorial.tex
@@ -1424,10 +1424,6 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 339.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 339.
 Package rerunfilecheck Info: File `Tutorial.out' has not changed.
 (rerunfilecheck)             Checksum: E9B21D1BAFDCCEA1492B4D9D1B72B69C;173.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 339.
  ) 
 Here is how much of TeX's memory you used:
@@ -1453,7 +1449,7 @@ i5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C
 :/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program
  Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Tutorial.pdf (9 pages, 4332658 bytes).
+Output written on Tutorial.pdf (9 pages, 4332660 bytes).
 PDF statistics:
  161 PDF objects out of 1000 (max. 8388607)
  31 named destinations out of 1000 (max. 500000)
